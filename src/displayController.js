@@ -36,7 +36,7 @@ const displayController = (function () {
     initialiseNav();
 
     // Change back to home once completed
-    displayMenu();
+    displayHome();
   }
 
   return { start };
