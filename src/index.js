@@ -10,8 +10,36 @@ const displayController = (function () {
   const content = document.querySelector("#content");
 
   function clearDisplay() {
-    content.removeChild();
+    content.removeChild(content.firstChild);
   }
 
-  return { clearDisplay };
+  function handleButtonClick(e) {
+    console.log(e.target);
+    if (e.target.classList == "home") {
+      clearDisplay();
+      displayHome();
+    } else if (e.target.classList == "menu") {
+      clearDisplay();
+      displayMenu();
+    } else if (e.target.classList == "about") {
+      clearDisplay();
+      displayAbout();
+    }
+  }
+
+  function initialiseNav() {
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", handleButtonClick);
+    });
+  }
+
+  function start() {
+    initialiseNav();
+    displayHome();
+  }
+
+  return { start };
 })();
+
+displayController.start();
