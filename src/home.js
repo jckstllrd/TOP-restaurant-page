@@ -16,19 +16,20 @@ export default function displayHome() {
   const homeText = document.createElement("div");
   homeText.classList.add("home-text-div");
 
-  const heading = document.createElement("h2")
-heading.textContent = "Welcome to the home of neapolitan pizza!"
+  const heading = document.createElement("h2");
+  heading.textContent = "Welcome to the home of neapolitan pizza!";
 
-  const p = document.createElement("p")
-  p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae provident voluptatibus quaerat. Quidem voluptates, magnam tempore cum doloribus numquam, nemo, nisi eius officia vero aliquid omnis reiciendis esse culpa adipisci."
+  const p = document.createElement("p");
+  p.textContent =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae provident voluptatibus quaerat. Quidem voluptates, magnam tempore cum doloribus numquam, nemo, nisi eius officia vero aliquid omnis reiciendis esse culpa adipisci.";
 
   imgDiv.appendChild(homeImg);
 
-  homeText.appendChild(heading)
-  homeText.appendChild(p)
+  homeText.appendChild(heading);
+  homeText.appendChild(p);
 
   homeContentDiv.appendChild(imgDiv);
-  homeContentDiv.appendChild(homeText)
+  homeContentDiv.appendChild(homeText);
 
   content.appendChild(homeContentDiv);
 }
