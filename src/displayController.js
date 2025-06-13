@@ -3,9 +3,12 @@ import displayMenu from "./menu.js";
 import displayAbout from "./about.js";
 
 const displayController = (function () {
+  const content = document.querySelector("#content");
 
   function clearDisplay() {
-    content.removeChild(content.firstChild);
+    while (content.firstChild) {
+      content.removeChild(content.firstChild);
+    }
   }
 
   function handleButtonClick(e) {
@@ -30,13 +33,13 @@ const displayController = (function () {
   }
 
   function start() {
-    console.log('here');
-    
     initialiseNav();
-    displayHome();
+
+    // Change back to home once completed
+    displayAbout();
   }
 
   return { start };
 })();
 
-export { displayController }
+export { displayController };
